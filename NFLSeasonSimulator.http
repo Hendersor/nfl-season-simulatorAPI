@@ -1,0 +1,6 @@
+@NFLSeasonSimulator_HostAddress = http://localhost:5068
+
+GET {{NFLSeasonSimulator_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
