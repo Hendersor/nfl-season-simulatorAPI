@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using NFLSeasonSimulator.Models;
 
 namespace NFLSeasonSimulator.Services
@@ -25,6 +27,14 @@ namespace NFLSeasonSimulator.Services
         }).ToList();
 
             return teams;
+        }
+
+
+        public Team? GetTeamById(int id)
+        {
+            var teams = GetAllTeams();
+            var team = teams.FirstOrDefault(t => t.Id == id);
+            return team;
         }
     }
 }

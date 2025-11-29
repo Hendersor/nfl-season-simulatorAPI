@@ -19,5 +19,18 @@ namespace NFLSeasonSimulator.Controllers
             var teams = _teamService.GetAllTeams();
             return Ok(teams);
         }
+
+        [HttpPost("{id}")]
+        public IActionResult SelectTeam(int id)
+        {
+            var team = _teamService.GetTeamById(id);
+
+            if(team == null)
+            {
+                return NotFound($"Team with ID {id} not found");
+            }
+
+            return Ok($"Team selected: {team.Name}"); 
+        }
     }
 }
