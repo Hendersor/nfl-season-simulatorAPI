@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace NFLSeasonSimulator.Controllers
 {
-    [Route("simulate/[controller]")]
+    [Route("simulate/team/[controller]")]
     public class TeamController: ControllerBase
     {
 

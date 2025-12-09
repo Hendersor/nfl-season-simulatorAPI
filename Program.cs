@@ -1,4 +1,5 @@
 
+using NFLSeasonSimulator.Interfaces;
 using NFLSeasonSimulator.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddControllers();
 builder.Services.AddScoped<ITeamService, TeamService>();
+builder.Services.AddScoped<IDraftService, DraftService>();
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
