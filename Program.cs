@@ -9,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddScoped<ITeamService, TeamService>();
 builder.Services.AddScoped<IDraftService, DraftService>();
+builder.Services.AddScoped<IPlayerService, PlayerService>();
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
